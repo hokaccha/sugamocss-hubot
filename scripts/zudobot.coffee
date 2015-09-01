@@ -7,7 +7,7 @@
 _ = require 'lodash'
 
 module.exports = (robot) ->
-  robot.respond 'zudobot', (msg) ->
+  robot.respond /zudobot/i, (msg) ->
     msg.send(msg.random(messages))
 
 messages = '''
