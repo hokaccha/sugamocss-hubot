@@ -8,7 +8,7 @@ _ = require 'lodash'
 
 module.exports = (robot) ->
   robot.respond 'zudobot', (msg) ->
-    msg.send _.sample(messages)
+    msg.send(msg.random(messages))
 
 messages = '''
   もうお前ら全員divだ！divッ！
