@@ -8,4 +8,4 @@ module.exports = (robot) ->
   robot.respond /edo (.+)/i, (msg) ->
     text = (msg.match[1] || '').trim()
     return unless text
-    msg.send("http://128.199.136.148:4000/edo?text=#{text}")
+    msg.send("http://128.199.136.148:4000/edo?text=#{encodeURIComponent(text)}")
