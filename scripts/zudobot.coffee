@@ -4,8 +4,6 @@
 # Commands:
 #   hubot zudobot
 
-_ = require 'lodash'
-
 module.exports = (robot) ->
   robot.respond /zudobot/i, (msg) ->
     msg.send(msg.random(messages))
