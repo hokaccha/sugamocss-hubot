@@ -6,7 +6,8 @@
 
 module.exports = (robot) ->
   robot.respond /zudobot/i, (msg) ->
-    msg.send(msg.random(messages))
+    text = msg.random(messages)
+    msg.send("http://128.199.136.148:4000/zudo?text=#{encodeURIComponent(text)}")
 
 messages = '''
   もうお前ら全員divだ！divッ！
